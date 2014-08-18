@@ -1,0 +1,54 @@
+<ion-view title="Weather for {{city}}, {{state}}">
+  <ion-content class="has-header">
+      <ul class="list">
+          <li class="item">
+              <h2>Currently:</h2>
+                  <div class="row">
+                      <div class="col">
+                        <h1 style="{{tempColor}}">{{current.currently.temperature}}° </h1>
+                        <p>Humidity: {{current.currently.humidity}}</p>
+                        <p>Feels like: {{current.currently.apparentTemperature}}</p>
+                        <p>{{current.currently.summary}}</p>
+                      </div>
+                      <div class="col">
+                        <skycon icon="currentWeatherIcon" size="iconSize" color="tempColor"></skycon>
+                      </div>
+                  </div>
+          </li>
+          <li class="item">
+              <h2>Today:</h2>
+              <div class="row">
+                  <div class="col">
+                      <p>high: {{daily.data[0].temperatureMax}}° </p>
+                      <p>Low: {{daily.data[0].temperatureMin}}° </p>
+                  </div>
+                  <div class="col">
+                      <skycon icon="todayWeatherIcon" size="futureIconSize" color="black"></skycon>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col">
+                      <p>{{daily.data[0].summary}}</p>
+                  </div>
+              </div>
+          </li>
+          <li class="item">
+              <h2>Tomorrow:</h2>
+              <div class="row">
+                  <div class="col">
+                      <p>high: {{daily.data[1].temperatureMax}}° </p>
+                      <p>Low: {{daily.data[1].temperatureMin}}° </p>
+                  </div>
+                  <div class="col">
+                      <skycon icon="tomorrowWeatherIcon" size="futureIconSize" color="black"></skycon>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col">
+                      <p>{{daily.data[1].summary}}</p>
+                  </div>
+              </div>
+          </li>
+      </ul>
+  </ion-content>
+</ion-view>

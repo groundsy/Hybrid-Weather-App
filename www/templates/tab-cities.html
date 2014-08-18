@@ -1,0 +1,11 @@
+<ion-view title="Select a City">
+    <ion-content class="has-header">
+        <ion-list>
+            <ion-item ng-repeat="city in cities">
+              <span href="#" ng-click="changeCity('{{$index}}')">
+                {{city.name}}, {{city.state}}
+              </span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
